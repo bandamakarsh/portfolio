@@ -3,103 +3,136 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Inter',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-background:#0d1117;
+background:#0b0f14;
 color:#e6edf3;
-}
-
-/* HEADER */
-header{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#0d1117;
-border-bottom:1px solid #1f2933;
-z-index:1000;
-}
-
-nav a{
-margin-left:30px;
-color:#9aa4ad;
-text-decoration:none;
-}
-nav a:hover{color:#00ff9c;}
-
-section{
-padding:120px 8%;
+text-align:center;
 }
 
 /* HERO */
 .hero{
-height:90vh;
-display:flex;
-align-items:center;
+padding:120px 20px 40px;
 }
 
 .hero h1{
-font-size:64px;
-margin-bottom:10px;
+font-size:60px;
 }
 
 .hero h2{
-font-size:24px;
 color:#00ff9c;
-margin-bottom:20px;
+margin:10px 0 25px;
+}
+
+.resume-btn{
+display:inline-block;
+background:#00ff9c;
+color:#000;
+padding:12px 25px;
+border-radius:8px;
+font-weight:600;
+}
+.resume-btn i{margin-right:6px;}
+
+/* IMAGE */
+.center-img img{
+width:220px;
+height:220px;
+border-radius:50%;
+border:3px solid #00ff9c;
+margin:40px auto;
+display:block;
 }
 
 /* ABOUT */
 .about{
-display:flex;
-align-items:center;
-gap:60px;
+max-width:900px;
+margin:auto;
+padding:40px 20px;
 }
 
-.about-img img{
-width:220px;
-height:220px;
-border-radius:12px;
-border:2px solid #00ff9c;
-object-fit:cover;
+.about h2{
+margin-bottom:25px;
 }
 
-.about-text p{
-margin-bottom:20px;
+.about p{
+margin-bottom:22px;
 line-height:1.8;
 color:#9aa4ad;
 }
 
-/* SKILLS */
-.skill-box{
-display:inline-block;
-border:1px solid #00ff9c44;
-padding:10px 20px;
-margin:10px;
-border-radius:8px;
+.location{
+margin-top:20px;
+color:#00ff9c;
+font-weight:600;
 }
 
-/* CARDS */
-.card{
-border:1px solid #1f2933;
-padding:30px;
-margin-bottom:20px;
+/* ARSENAL */
+.arsenal{
+padding:60px 20px;
+}
+
+.domain{
+border:1px solid #00ff9c33;
+padding:20px;
+margin:15px auto;
+max-width:500px;
 border-radius:10px;
 }
 
-/* FADE ANIMATION */
-.fade{
+/* CERT */
+.cert{
+padding:60px 20px;
+}
+
+.cert-card{
+border:1px solid #00ff9c33;
+padding:30px;
+max-width:500px;
+margin:auto;
+border-radius:12px;
+}
+
+.verify{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#00ff9c;
+color:#000;
+border-radius:6px;
+font-weight:600;
+}
+
+/* CONTACT */
+.contact{
+padding:60px 20px;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+td{
+border:1px solid #1f2933;
+padding:12px 25px;
+}
+.hidden{
 opacity:0;
 transform:translateY(40px);
 transition:1s;
 }
-.fade.show{
+.show{
 opacity:1;
 transform:translateY(0);
 }
-.delay{transition-delay:.3s;}
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+.show{
+opacity:1;
+transform:translateY(0);
+}
