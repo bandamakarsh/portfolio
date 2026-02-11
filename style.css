@@ -93,6 +93,21 @@ max-width:500px;
 margin:auto;
 border-radius:12px;
 }
+.cert-btn {
+    background-color: #ff9900;   /* AWS orange */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cert-btn:hover {
+    background-color: #e68a00;
+}
+
 
 .verify{
 display:inline-block;
