@@ -1,41 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bandam Akarsh Reddy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bandam Akarsh Reddy | Cyber Explorer</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:black;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ===== LOADER ===== */
+.loader{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:100;
+  flex-direction:column;
+  animation:fadeOut 1.5s ease forwards;
+  animation-delay:3s;
+}
+
+.loader h1{
+  color:#00f0ff;
+  letter-spacing:3px;
+  animation:pulse 1s infinite alternate;
+}
+
+@keyframes pulse{
+  from{opacity:0.4;}
+  to{opacity:1;}
+}
+
+@keyframes fadeOut{
+  to{
+    opacity:0;
+    visibility:hidden;
+  }
+}
+
+/* ===== VIDEO BACKGROUND ===== */
+.video-bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+}
+
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  z-index:-1;
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:48px;
+  color:#00f0ff;
+  text-shadow:0 0 20px #00f0ff;
+}
+
+.hero h2{
+  margin-top:10px;
+  font-weight:400;
+  letter-spacing:2px;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:14px;
+  opacity:0.8;
+}
+
+.resume-btn{
+  margin-top:25px;
+  padding:12px 25px;
+  border:1px solid #00f0ff;
+  color:#00f0ff;
+  text-decoration:none;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.resume-btn:hover{
+  background:#00f0ff;
+  color:black;
+  box-shadow:0 0 20px #00f0ff;
+}
+
+/* ===== SECTION STYLE ===== */
+section{
+  padding:80px 10%;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:40px;
+  color:#00f0ff;
+  text-shadow:0 0 10px #00f0ff;
+}
+
+/* ===== ABOUT ===== */
+.about p{
+  margin-bottom:20px;
+  line-height:1.7;
+  opacity:0.85;
+}
+
+.location{
+  margin-top:20px;
+  color:#00f0ff;
+}
+
+/* ===== ARSENAL ===== */
+.arsenal .domain{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  margin-bottom:20px;
+  border-left:3px solid #00f0ff;
+  transition:0.3s;
+}
+
+.arsenal .domain:hover{
+  transform:translateX(10px);
+  box-shadow:0 0 15px #00f0ff;
+}
+
+/* ===== CERT ===== */
+.cert-card{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  text-align:center;
+  border:1px solid #00f0ff;
+}
+
+.verify{
+  display:inline-block;
+  margin-top:15px;
+  color:#00f0ff;
+  text-decoration:none;
+}
+
+/* ===== CONTACT ===== */
+.contact p{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+.contact a{
+  color:#00f0ff;
+  text-decoration:none;
+}
+
+.contact a:hover{
+  text-decoration:underline;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-<!-- <div class="logo">Bandam Akarsh</div> -->
-</header>
+<!-- LOADER -->
+<div class="loader">
+  <h1>INITIALIZING CYBER SYSTEM...</h1>
+</div>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline class="video-bg">
+  <source src="assets/background.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 
 <!-- HERO -->
 <section class="hero">
+  <h1>Bandam Akarsh Reddy</h1>
+  <h2>Cybersecurity Student</h2>
+  <p>Explorer • Ethical Hacker • Developer</p>
 
-<h1>Bandam Akarsh Reddy </h1>
-<h2>Cybersecurity Student</h2>
-
-<a href="#" class="resume-btn">
-<i class='bx bx-download'></i> Download Resume
-</a>
-
-</section>
-
-<!-- IMAGE CENTER -->
-<section class="center-img">
-<img src="images.jpeg">
+  <a href="#" class="resume-btn">
+    <i class='bx bx-download'></i> Download Resume
+  </a>
 </section>
 
 <!-- ABOUT -->
 <section class="about">
-
 <h2>About Me</h2>
 
 <p>
@@ -43,17 +223,12 @@ I am Bandam Akarsh, a Computer Science Engineering student specializing in Cyber
 </p>
 
 <p>
-I am currently building a strong foundation in cybersecurity along with core computer science subjects such as Operating Systems, Linux environments, and programming with Python and C. I actively focus on improving my problem-solving abilities and strengthening my understanding of system-level security concepts.
+I am currently building a strong foundation in cybersecurity along with core computer science subjects such as Operating Systems, Linux environments, and programming with Python and C.
 </p>
 
 <p>
-My learning journey includes exploring digital forensics, network security fundamentals, and cloud computing concepts while also developing front-end web skills. I enjoy applying theoretical knowledge through practical exercises and continuously expanding my technical exposure.
+My learning journey includes exploring digital forensics, network security fundamentals, cloud computing concepts, and front-end web development.
 </p>
-
-<p>
-I aim to grow as a cybersecurity professional by consistently learning new technologies, practicing secure development methods, and understanding emerging threats in the digital world. My goal is to contribute to building secure and reliable systems in the future.
-</p>
-
 
 <div class="location">
 <i class='bx bx-map'></i> India
@@ -61,9 +236,8 @@ I aim to grow as a cybersecurity professional by consistently learning new techn
 
 </section>
 
-<!-- TECHNICAL ARSENAL -->
+<!-- ARSENAL -->
 <section class="arsenal">
-
 <h2>Technical Arsenal</h2>
 
 <div class="domain">
@@ -83,7 +257,7 @@ I aim to grow as a cybersecurity professional by consistently learning new techn
 
 <div class="domain">
 <h3>Web Technologies</h3>
-<p>HTML, CSS, Front-end Development</p>
+<p>HTML, CSS</p>
 </div>
 
 <div class="domain">
@@ -95,43 +269,36 @@ I aim to grow as a cybersecurity professional by consistently learning new techn
 
 <!-- CERTIFICATIONS -->
 <section class="cert">
-
 <h2>Professional Certifications</h2>
 
 <div class="cert-card">
-
 <h3>AWS Academy Graduate – Cloud Foundations</h3>
 <p>Training Badge</p>
-
 <a href="#" class="verify">
 <i class='bx bx-link-external'></i> Verify Credential
 </a>
-
 </div>
 
 </section>
 
 <!-- CONTACT -->
 <section class="contact">
-
 <h2>Get In Touch</h2>
 
-<p class="mail">
-  <i class='bx bx-envelope'></i>
-  <a href="mailto:bandamakarsh@gmail.com">bandamakarsh@gmail.com</a>
+<p>
+<i class='bx bx-envelope'></i>
+<a href="mailto:bandamakarsh@gmail.com">bandamakarsh@gmail.com</a>
 </p>
 
-<p class="linkedin">
-  <i class='bx bxl-linkedin'></i>
-  <a href="https://www.linkedin.com/in/bandam-akarsh-5580a8303" target="_blank">
-    Bandam Akarsh
-  </a>
+<p>
+<i class='bx bxl-linkedin'></i>
+<a href="https://www.linkedin.com/in/bandam-akarsh-5580a8303" target="_blank">
+Bandam Akarsh
+</a>
 </p>
-
 
 </section>
 
-<script src="script.js"></script>
-
 </body>
 </html>
+
